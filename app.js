@@ -19,8 +19,8 @@ card.addEventListener('animationend',event=>{if(event.animationName==='cta-shine
 const hs=document.getElementById('hsteps'),hero=document.getElementById('hero'),heroWrap=document.querySelector('.hero-wrap'),copy=document.querySelector('.hero-copy');
 // The 🎁 in the card (Noto Emoji Animation, CC BY 4.0): static at first, plays from about 1.4 s,
 // still again while the first screen is away, the tab is hidden or motion is reduced.
-const gift=card.querySelector('.cta-gift'),giftStill=gift.getAttribute('src'),giftAnim=gift.dataset.anim;let giftOn=false;
-function syncGift(){const src=giftOn&&heroLive&&!document.hidden&&!reduceMotion.matches?giftAnim:giftStill;if(gift.getAttribute('src')!==src)gift.src=src;}
+const gift=card.querySelector('.cta-gift'),giftStill=gift.getAttribute('src'),giftAnim=gift.dataset.anim||giftStill;let giftOn=false;
+function syncGift(){gift.classList.toggle('gift-live',giftOn&&heroLive&&!document.hidden&&!reduceMotion.matches);}
 setTimeout(()=>{giftOn=true;syncGift();},1400);
 function render(){
  const content=TOPICS[topic];root.dataset.topic=topic;
