@@ -1,0 +1,266 @@
+@font-face{font-family:Prata;src:url('assets/fonts/prata-400.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:Manrope;src:url('assets/fonts/manrope-400.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:Manrope;src:url('assets/fonts/manrope-600.woff2') format('woff2');font-weight:600;font-display:swap}@font-face{font-family:Manrope;src:url('assets/fonts/manrope-700.woff2') format('woff2');font-weight:700;font-display:swap}
+:root{color-scheme:light;--bg:#3D2348;--hero-text:#FFF9F0;--accent:#FFCEAD;--secondary-text:#EDD8E5;--hero-muted:#DFC9DA;--ink:#38223D;--muted:#6F5C70;--cream:#FFF9F0;--surface:#FFFDF9;--paper:#F7F1EB;--berry:#823952;--button-text:#FFF9F0;--line:#E2D4DD;--light-line:#FFFFFF35;--chip:#FFFFFF0A;--chip-hover:#FFFFFF17;--selected:#FFCEAD;--selected-text:#3D2348;--display:Prata,Georgia,serif;--body:Manrope,system-ui,sans-serif;--shadow:0 12px 38px #1C092D1C;--hero-gradient:radial-gradient(ellipse at 80% 30%,#84536F 0,transparent 60%),linear-gradient(125deg,#47274F,#311C3E);--night-top:#3A2145;--night-bottom:#22132B;--glass:#FFFFFF0F;--glass-line:#FFFFFF1F;--arc:#FFCEAD38;--footer-bg:#170C1D;--tg-bg:linear-gradient(180deg,#2286C8,#145F92);--vk-bg:linear-gradient(180deg,#1F7DEB,#005ACB);--max-bg:linear-gradient(180deg,#8452F7,#6532F5);--hero-sub:#FFF9F0BF;--chip-on:#FFCEAD29;--sticky-bg:#22132BEB;--sticky-line:#FFFFFF1A}
+:root[data-theme=light]{--bg:#F7F5F2;--hero-text:#2D2930;--accent:#625063;--secondary-text:#625063;--hero-muted:#625063;--berry:#625063;--ink:#2D2930;--muted:#675D69;--cream:#F7F5F2;--paper:#F7F5F2;--surface:#FBFAF8;--line:#DED8DE;--light-line:#CFC5D0;--chip:#FBFAF8;--chip-hover:#EBE6EF;--selected:#625063;--selected-text:#FFF;--hero-sub:#625063;--chip-on:#6250631F;--hero-gradient:radial-gradient(ellipse at 80% 30%,#E8EAF1 0,transparent 65%),#F7F5F2;--night-top:#F7F5F2;--night-bottom:#EEE9EF;--glass:#FFFFFFB8;--glass-line:#DED8DE;--arc:#62506333;--footer-bg:#E7E1E8;--sticky-bg:#FBFAF8EB;--sticky-line:#DED8DE}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px;-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--hero-text);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}h1,h2,h3,p,figure{margin:0}a{color:inherit;text-decoration:none}button{font:inherit}button,a,summary{-webkit-tap-highlight-color:transparent}svg{display:block;width:20px;height:20px;flex:none}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #B47239;outline-offset:4px}button{cursor:pointer}[hidden]{display:none!important}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}.shell{width:min(100% - 40px,1160px);margin-inline:auto;min-width:0}.skip-link{position:absolute;left:16px;top:0;z-index:100;background:var(--cream);color:var(--ink);padding:12px;transform:translateY(-110%)}.skip-link:focus{transform:none}.hero-wrap{overflow:hidden;background:linear-gradient(transparent 72%,var(--night-top)),var(--hero-gradient)}
+.header{display:flex;justify-content:space-between;align-items:center;padding-block:6px 0;position:relative;z-index:4}.brand{display:flex;align-items:center;gap:6px;min-height:28px}.brand svg{color:var(--accent);width:14px;height:16px}.wordmark{font:600 14px/1.4 var(--body);white-space:nowrap;color:var(--secondary-text)}.brand-tail{font-weight:400}.header-note{display:none;color:var(--hero-muted);font-size:14px}
+.hero{position:relative;padding-top:8px;padding-bottom:20px}.hero-copy{position:relative;z-index:2}h1{font:400 40px/1.13 var(--display);letter-spacing:-1.3px;transition:opacity .16s;max-width:100%;overflow-wrap:normal}h1 span{display:block}h1 .accent{color:var(--accent)}.subtitle{font-size:15px;line-height:1.45;color:var(--hero-sub);margin-top:10px;max-width:48ch;transition:opacity .16s}.changing{opacity:.45}.scene{--scene-height:clamp(175px,calc(100svh - 410px),236px);height:var(--scene-height);position:relative;margin:10px 0 8px;isolation:isolate;min-width:0}.portrait{position:absolute;right:-10px;bottom:-4px;height:calc(100% + 15px);aspect-ratio:26/25;z-index:0;animation:portrait-in .6s ease-out both;mask-image:linear-gradient(to bottom,#000 75%,transparent)}.portrait picture{display:block;width:100%;height:100%}.tab-hidden *{animation-play-state:paused!important}.portrait img{height:100%;width:100%;display:block;object-fit:cover;object-position:50% 0}.mc-dots i{width:6px;height:6px;border-radius:50%;background:#A194AA;animation:typing-dot 1s infinite;animation-play-state:paused}.mc-dots.on i{animation-play-state:running}.mc-dots i:nth-child(2){animation-delay:.15s}.mc-dots i:nth-child(3){animation-delay:.3s}.emoji{display:inline-block;width:1.25em;margin-right:.35em;text-align:center;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;line-height:1;font-style:normal}.emoji-end{margin-right:0;margin-left:.35em}.nowrap{white-space:nowrap}.hero-action{position:relative;z-index:3;min-width:0}.micro-copy{font-size:13px;line-height:1.45;text-align:center;color:var(--hero-muted);margin-top:10px}.content-wrap{color:var(--hero-text);background:linear-gradient(180deg,var(--night-top),var(--night-bottom));position:relative;overflow:hidden}.content-wrap::before{content:"";position:absolute;left:-35%;right:-35%;top:0;height:180px;border-radius:50%;border-top:1px solid var(--arc);pointer-events:none}.content-wrap::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(1.3px 1.3px at 6% 3%,#FFF9F0B0,transparent),radial-gradient(1px 1px at 22% 9%,#FFF9F090,transparent),radial-gradient(1.2px 1.2px at 47% 2%,#FFF9F0A0,transparent),radial-gradient(1px 1px at 73% 11%,#FFF9F080,transparent),radial-gradient(1.4px 1.4px at 94% 7%,#FFF9F0A0,transparent),radial-gradient(1px 1px at 4% 27%,#FFF9F080,transparent),radial-gradient(1.2px 1.2px at 58% 24%,#FFF9F090,transparent),radial-gradient(1px 1px at 97% 33%,#FFF9F080,transparent),radial-gradient(1.3px 1.3px at 37% 44%,#FFF9F090,transparent),radial-gradient(1px 1px at 91% 58%,#FFF9F070,transparent),radial-gradient(1.2px 1.2px at 12% 63%,#FFF9F080,transparent),radial-gradient(1px 1px at 63% 82%,#FFF9F070,transparent),radial-gradient(1.2px 1.2px at 28% 91%,#FFF9F070,transparent),radial-gradient(1px 1px at 85% 94%,#FFF9F060,transparent)}.stars{position:absolute;inset:0;pointer-events:none}.stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#FFF9F0;opacity:.25;animation:twinkle var(--tw) var(--tw-delay) ease-in-out infinite;animation-play-state:paused}.is-live .stars i{animation-play-state:running}[data-theme=light] .stars,[data-theme=light] .content-wrap::after{display:none}.offer-section{padding-top:25px}.offer-card{padding:23px 21px;background:var(--surface);border:1px solid var(--line);border-radius:19px;box-shadow:0 5px 24px #46234707}h2{font:400 29px/1.25 var(--display);letter-spacing:-1px}.offer-card h2{font-size:25px}.section-kicker{font-size:14px;line-height:1.4;color:#823952;margin-bottom:12px}.offer-list{list-style:none;padding:0;margin:19px 0 0;display:grid;gap:11px;font-size:15px;line-height:1.45}.offer-list li{display:flex;gap:10px;align-items:flex-start}.offer-list svg{color:#823952;width:18px;height:18px;margin-top:2px}.section{padding-block:48px}.steps{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:27px}.steps li{display:flex;gap:18px;align-items:flex-start}.step-number{font:400 32px/1 var(--display);color:#A87D8D;flex:none;width:47px}.steps h3{font:600 17px/1.4 var(--body);margin-bottom:6px}.steps p{font-size:15px;color:var(--muted);max-width:35ch}.example-section{background:#E9E2EA}.example-grid{display:grid;gap:28px}.section-description{font-size:16px;line-height:1.6;color:var(--muted);margin-top:18px;max-width:35ch}.sample-caption{font-size:14px;line-height:1.5;color:var(--muted);margin-top:20px;max-width:29ch}.example-chat{display:grid;gap:11px}.natal-card{background:radial-gradient(ellipse at 90% 50%,#E5E4ED,transparent 65%),#F7F5F2;border-radius:17px;overflow:hidden;padding:22px;position:relative;min-height:250px;border:1px solid #D9D1DC;color:#2D2930}.card-brand{display:flex;gap:6px;align-items:center;font:400 14px/1.3 var(--display);color:#625063}.card-brand svg{width:15px;height:17px}.natal-copy{position:relative;z-index:2;margin-top:27px;max-width:70%}.natal-copy h3{font:400 24px/1.25 var(--display);letter-spacing:-.7px}.natal-copy p{font-size:15px;color:#625063;margin-top:13px;line-height:1.4}.natal-copy span{display:block;font-size:14px;color:#625063;margin-top:15px}.natal-orbits{position:absolute;right:-42px;top:20px;width:170px;height:240px;opacity:.7}.message{max-width:94%;padding:16px 17px;background:var(--surface);border:1px solid #DED4DF;border-radius:15px 15px 15px 3px;font-size:15px;line-height:1.6;box-shadow:0 3px 12px #47234F05}.message-author{display:block;color:#823952;font-size:14px;font-weight:600;margin-bottom:7px}.message:nth-child(3){margin-left:10px}.expert-section{display:grid;grid-template-columns:64px minmax(0,1fr);gap:17px}.expert-icon{width:64px;height:64px;border:1px solid #D4C5D3;border-radius:50%;display:grid;place-items:center;background:#EEE5EC;color:#8B546E}.expert-icon svg{width:29px;height:29px}.expert-section h2{font-size:25px}.expert-sub{font-size:16px;color:#823952;margin-top:13px;margin-bottom:15px}.expert-section p:not(.section-kicker){font-size:15px;line-height:1.6}.expert-section .quiet{font-size:14px!important;color:var(--muted);margin-top:13px}.about{margin-top:16px;border-top:1px solid var(--line);padding-top:9px}.about summary{font-size:14px;min-height:44px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:8px;list-style:none}.about summary::after{content:'+';font-size:22px}.about[open] summary::after{content:'−'}.about p{color:var(--muted);padding:8px 0}.faq{padding-top:8px}.faq-list{margin-top:25px}.faq details{border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px;padding:16px 0;cursor:pointer;font-size:16px;line-height:1.45;font-weight:600;list-style:none}.faq summary::after{content:'+';font-size:25px;font-weight:400;color:#87536E;flex:none}.faq details[open] summary::after{content:'−'}.faq details p{padding:0 25px 22px 0;color:var(--muted);font-size:15px}summary::-webkit-details-marker{display:none}.brief{position:relative;z-index:1;display:grid;gap:18px;padding-block:24px 22px}.brief .section-kicker{margin-bottom:10px;color:var(--hero-muted)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mc{background:var(--glass);border:1px solid var(--glass-line);border-radius:16px;overflow:hidden}.mc-head{display:flex;align-items:center;gap:8px;padding:7px 12px;border-bottom:1px solid var(--glass-line);font-size:14px}.mc-head small{color:var(--secondary-text);font-size:13px}.mc-ava{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--bg)}.mc-ava svg{width:13px;height:15px}.mc-body{position:relative;display:grid;gap:6px;padding:8px 12px}.mc-user{justify-self:end;min-height:33px;padding:7px 11px;border-radius:13px 13px 3px 13px;background:var(--accent);color:var(--bg);font-size:14px;line-height:1.35;transition:opacity .25s}.mc-dots{position:absolute;left:12px;top:0;display:inline-flex;gap:4px;padding:11px 12px;border-radius:13px 13px 13px 3px;background:var(--surface);opacity:0;transition:opacity .2s}.mc-dots.on{opacity:1}.mc-luna{justify-self:start;max-width:94%;padding:6px 10px;border-radius:13px 13px 13px 3px;background:var(--surface);color:var(--ink);font-size:14px;line-height:1.3}.mc-step{transition:opacity .3s,transform .3s}.mc.armed .mc-step{opacity:0;transform:translateY(6px)}.mc.armed .mc-step.on{opacity:1;transform:none}.mc-input{display:flex;align-items:center;gap:8px;width:100%;min-height:48px;margin:0;padding:6px 8px 6px 12px;border:0;border-top:1px solid var(--glass-line);background:transparent;color:var(--secondary-text);font:400 14px/1.3 var(--body);text-align:left;cursor:pointer}.mc-field{flex:1;min-width:0;padding:8px 12px;border-radius:18px;background:var(--glass);border:1px solid var(--glass-line)}.mc-send{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--bg)}.mc-send svg{width:18px;height:18px}.continue{margin-top:12px;scroll-margin-bottom:96px}.continue:not([hidden]){animation:card-in .3s ease-out}.final-ask{position:relative;margin-top:26px;padding:22px 20px 20px;text-align:center;background:var(--glass);border:1px solid #FFCEAD59;border-radius:18px;box-shadow:0 0 32px #FFCEAD1F}.final-ask::before{content:"";position:absolute;left:-30%;right:-30%;top:-40px;height:140px;border-radius:50%;border-top:1px solid var(--arc);pointer-events:none}.final-ask-icon{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 12px;border-radius:50%;border:1px solid #FFCEAD99;background:var(--night-top);color:var(--accent)}.final-ask-icon svg{width:22px;height:22px}.final-accent{color:var(--accent);white-space:nowrap}.final-ask .mc-field{border-color:#FFCEAD8C;text-align:left}.final-ask .continue-label{text-align:center}.final-ask-title{font:400 22px/1.25 var(--display);margin-bottom:6px}.final-ask-note{font-size:14px;color:var(--secondary-text);margin-bottom:12px}.final-input{min-height:48px;padding:0;border:0}.continue-label{font-size:14px;color:var(--secondary-text);margin-bottom:8px}.mc-card{justify-self:start;max-width:88%;display:grid;gap:3px;padding:10px 12px;border-radius:13px 13px 13px 3px;background:var(--surface);color:#625063;font-size:14px;line-height:1.35;transition:opacity .35s,transform .35s}.mc-card b{font:400 16px/1.25 var(--display);color:#2D2930}.mc-card small{font-size:13px;margin-top:3px;padding-top:4px;border-top:1px solid #CFC5D070}.mc-note{margin-top:8px;font-size:13px;color:var(--hero-muted)}.brief-title{font:400 22px/1.2 var(--display);letter-spacing:-.5px;margin:-2px 0 14px;text-wrap:balance}.elena{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;align-items:start;padding:14px;background:var(--glass);border:1px solid var(--glass-line);border-radius:16px;font-size:14px;line-height:1.5}.elena-icon{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#FFCEAD1A;color:var(--accent);border:1px solid #FFCEAD59}.elena-icon svg{width:22px;height:22px}.elena-name{font-size:15px;font-weight:700;margin-bottom:3px}.elena-quiet{color:var(--secondary-text);margin-top:6px}.mini-faq details{border-top:1px solid var(--glass-line)}.mini-faq details:last-child{border-bottom:1px solid var(--glass-line)}.mini-faq summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:9px 0;cursor:pointer;font-size:15px;line-height:1.4;font-weight:600;list-style:none}.faq-q{min-width:0}.mini-faq summary::after{content:"+";font-size:22px;font-weight:400;color:var(--accent);flex:none}.mini-faq details[open] summary::after{content:"−"}.mini-faq details p{padding:0 22px 14px 0;color:var(--secondary-text);font-size:14px}.footer{background:var(--footer-bg);box-shadow:0 0 0 100vmax var(--footer-bg);clip-path:inset(0 -100vmax);padding-block:16px calc(76px + env(safe-area-inset-bottom,0px));color:var(--hero-muted);font-size:12px;line-height:1.65}.footer-brand{color:var(--hero-text);font-size:15px}.legal-links{display:flex;align-items:center;gap:0 9px;flex-wrap:wrap}.legal-links a{display:inline-flex;align-items:center;min-height:36px;text-decoration:underline;text-underline-offset:4px}#legal-status:empty{display:none}.legal-placeholder{margin-top:2px}.sticky-cta{position:fixed;z-index:20;bottom:0;left:0;right:0;background:var(--sticky-bg);border-top:1px solid var(--sticky-line);padding:9px max(14px,env(safe-area-inset-right)) max(9px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));color:var(--hero-text);animation:sticky-in .2s ease-out}.sticky-cta::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% + 1px);height:20px;background:linear-gradient(transparent,var(--sticky-bg));pointer-events:none}.sticky-inner{display:flex;gap:8px;max-width:500px;margin:auto}.telegram-help{position:fixed;z-index:30;left:12px;right:12px;bottom:calc(90px + env(safe-area-inset-bottom));max-width:430px;margin:auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:17px;box-shadow:var(--shadow);padding:22px 48px 18px 18px;font-size:14px}.telegram-help strong{white-space:nowrap}.toast-close{position:absolute;right:4px;top:3px;min-width:44px;min-height:44px;border:0;background:transparent;border-radius:8px;color:var(--ink);font-size:25px}.copy-button{min-height:44px;padding:8px 15px;background:#EADFE7;color:#482E4D;border:0;border-radius:9px;margin-top:12px;font-size:14px}.copy-status{font-size:14px;margin-top:8px}.copy-status:empty{display:none}.noscript{padding:20px;font-size:14px}
+@keyframes portrait-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}@keyframes sticky-in{from{transform:translateY(100%)}}@keyframes twinkle-soft{50%{opacity:.7}}@keyframes twinkle{50%{opacity:.95}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes typing-dot{0%,60%,100%{opacity:.35}30%{opacity:1}}@keyframes card-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(hover:hover){.legal-links a:hover{text-decoration-thickness:2px}.faq summary:hover,.about summary:hover{color:#823952}.mini-faq summary:hover{color:var(--accent)}}
+@media(max-width:359px){.shell{width:calc(100% - 32px)}.header{padding-top:5px;padding-bottom:0}h1{font-size:32px;letter-spacing:-1.5px}.subtitle{line-height:1.4}.scene{--scene-height:clamp(160px,calc(100svh - 415px),220px)}.expert-section{grid-template-columns:1fr}.expert-icon{margin-bottom:0}.footer-brand{font-size:15px}}
+@media(min-width:600px) and (max-width:899px){.header,.hero{max-width:600px}.header{padding-block:14px 2px}.hero{padding-top:12px}h1{font-size:44px}.subtitle{font-size:16px}.scene{height:280px;margin-block:18px}.portrait{height:300px;right:5px}.offer-section{max-width:600px}.section{max-width:700px}.example-section{max-width:none}.brief{max-width:600px}.example-chat{max-width:520px}}
+@media(min-width:900px){.shell{width:calc(100% - 88px);max-width:1180px}.header{padding-block:24px 8px}.header-note{display:block}.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:35px;padding-top:45px;padding-bottom:65px}.hero-copy{grid-column:1;grid-row:1;padding-right:5px}h1{font-size:54px;line-height:1.16;letter-spacing:-2px}.subtitle{font-size:17px;line-height:1.6;margin-top:22px;max-width:43ch}.scene{height:560px;grid-column:2;grid-row:1/3;margin:0;align-self:center}.portrait{height:100%;max-width:calc(100% + 60px);bottom:0;right:-40px}.hero-action{grid-column:1;grid-row:2;align-self:start;margin-top:31px;max-width:470px}.micro-copy{font-size:13px;text-align:left;margin-top:14px}.hero-action .micro-copy{max-width:470px}.hero .scene{margin-bottom:0}.offer-section{padding-top:35px}.brief{grid-template-columns:1fr 1.2fr;grid-template-areas:"steps trust" "faq trust" "final trust";grid-template-rows:auto auto 1fr;gap:44px 56px;align-items:start;padding-block:48px 52px}.brief-steps{grid-area:steps}.trust{grid-area:trust}.brief-faq{grid-area:faq}.final-ask{grid-area:final;margin-top:0}.offer-card{padding:30px 35px;display:grid;grid-template-columns:1fr 1fr;column-gap:30px}.offer-card .section-kicker{grid-column:1}.offer-card h2{grid-column:1;font-size:31px;max-width:360px}.offer-list{grid-column:2;grid-row:1/3;align-self:center;margin:0;font-size:16px;gap:14px}.section{padding-block:76px}h2{font-size:40px}.section-kicker{font-size:14px}.steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin-top:42px}.steps li{display:block}.step-number{display:block;font-size:42px;margin-bottom:22px}.steps h3{font-size:18px}.steps p{font-size:16px}.example-grid{grid-template-columns:1fr 1fr;gap:75px;align-items:start}.example-intro{padding-top:30px;position:sticky;top:40px}.example-chat{gap:13px}.natal-card{min-height:285px;padding:28px}.natal-copy{margin-top:30px}.natal-copy h3{font-size:30px}.natal-copy p{font-size:17px}.natal-copy span{font-size:15px}.natal-orbits{width:220px;height:290px;right:-22px}.message{font-size:16px;padding:20px 23px}.expert-section{max-width:850px;grid-template-columns:64px 1fr;gap:25px}.expert-section h2{font-size:33px}.expert-section p:not(.section-kicker){font-size:16px}.faq{max-width:850px;padding-top:15px}.faq-list{margin-top:35px}.faq summary{font-size:18px;min-height:78px}.faq details p{font-size:16px;max-width:70ch}.footer{display:flex;flex-wrap:wrap;align-items:center;gap:0 28px;padding-block:22px 26px}.legal-placeholder{margin:0}.sticky-cta{display:none!important}.telegram-help{bottom:24px}}
+@media(min-width:1200px){h1{font-size:62px}.hero{column-gap:60px}.scene{height:610px}.portrait{right:-25px}}
+@media(max-width:599px) and (max-height:640px){.header{padding-block:5px 0}.hero{padding-top:5px}.subtitle{margin-top:7px}.scene{margin-block:7px;--scene-height:clamp(155px,calc(100svh - 390px),220px)}}
+@media(max-width:599px) and (max-height:620px){.portrait{aspect-ratio:28/25}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:599px){.portrait{right:-34px}}
+@media(max-width:359px){.header{padding-block:4px 0}}
+@media(max-width:359px){h1{font-size:36px}}
+/* ===== Орбиты, нарисованные кодом ===== */
+.portrait{isolation:isolate}
+.portrait picture{position:relative;z-index:1}
+.lp-orbits{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.lp-back{z-index:0}
+.lp-front{z-index:2}
+.lp-line{fill:none;stroke:#FFE5D3;stroke-opacity:.62;stroke-width:5.5;stroke-linecap:round}
+.lp-halo{fill:none;stroke:#FFCEAD;stroke-opacity:.13;stroke-width:20;stroke-linecap:round}
+.lp-front .lp-cover{fill:none;stroke-width:12;stroke-linecap:round;opacity:.92}
+.lp-pearl{stroke:#FFFFFF;stroke-opacity:.35;stroke-width:1.5}
+.lp-glowdot{opacity:.45;transform-box:fill-box;transform-origin:center;animation:lp-breathe var(--d) ease-in-out var(--dl) infinite alternate;animation-play-state:paused}
+.lp-glowdot.big{opacity:.6}
+.is-live .lp-glowdot{animation-play-state:running}
+@keyframes lp-breathe{from{opacity:.28;transform:scale(.92)}to{opacity:.72;transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.lp-star{display:none}.lp-glowdot{animation:none}}
+:root[data-theme=light] .lp-line{stroke:#8E6E86;stroke-opacity:.5}
+:root[data-theme=light] .lp-halo{stroke:#B2B8CA;stroke-opacity:.18}
+.lp-front .lp-line{stroke-linecap:butt}
+/* ===== Первый экран: три факта над диалогом (телефон) и под подзаголовком (десктоп) ===== */
+/* A and B: the portrait grows up behind the free space, the dialog sits right under the subtitle */
+/* ===== Блок доверия: сравнение, колонка Луны подсвечена ===== */
+.tv-sub{color:var(--hero-sub);font-size:14px;line-height:1.4;margin:-8px 0 14px}
+.tv-count{font-size:13px;line-height:1.4;color:var(--accent);margin:-6px 0 12px}
+.tv2-table{position:relative;border:1px solid var(--glass-line);border-radius:18px;background:var(--glass);padding:4px 10px 6px}
+.tv2-table::before{content:"";position:absolute;top:5px;bottom:5px;right:138px;width:56px;border-radius:14px;border:1px solid #FFCEAD8C;background:linear-gradient(#FFCEAD22,#FFCEAD08);box-shadow:0 0 24px #FFCEAD26;pointer-events:none}
+.tv2-row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 56px 58px 70px;gap:0 2px;align-items:center;min-height:48px}
+.tv2-row+.tv2-row{border-top:1px solid var(--glass-line)}
+.tv2-head{min-height:40px;font-size:12px;color:var(--hero-sub);text-align:center}
+.tv2-head .luna{color:var(--accent);font-weight:700;font-size:13.5px}
+.tv2-row [role=rowheader]{font-size:13.5px;line-height:1.3;padding-right:8px}
+.tv2-row [role=cell]{justify-self:center;position:relative;width:22px;height:22px;color:#FFFFFF8C}
+.tv2-row .luna{color:var(--accent);filter:drop-shadow(0 0 6px #FFCEAD80)}
+.tv2-row .yes::after{content:"";position:absolute;left:7px;top:2px;width:6px;height:12px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.tv2-row .no{color:#FFFFFF47}
+.tv2-row .no::before,.tv2-row .no::after{content:"";position:absolute;left:10px;top:4px;width:2px;height:14px;border-radius:1px;background:currentColor;transform:rotate(45deg)}
+.tv2-row .no::after{transform:rotate(-45deg)}
+.tv2-head [role=columnheader]{line-height:1.2}
+.tv2-row .luna.yes::before{content:"";position:absolute;inset:-9px;border-radius:50%;background:radial-gradient(#FFCEAD80,#FFCEAD00 70%);opacity:0;pointer-events:none}
+.trust.armed .tv2-row .luna.yes{opacity:.35}
+.trust.armed.shown .tv2-row .luna.yes{animation:tick-on .5s ease-out calc(var(--i)*120ms) both}
+.trust.armed.shown .tv2-row .luna.yes::before{animation:tick-glow .8s ease-out calc(var(--i)*120ms) both}
+@keyframes tick-on{0%{opacity:.35;transform:scale(.6)}60%{opacity:1;transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+@keyframes tick-glow{0%{opacity:0}35%{opacity:1}100%{opacity:0}}
+/* Линии орбит одной толщины на любом экране; звёзды крупнее на телефоне */
+.lp-orbits .lp-line,.lp-orbits .lp-halo{vector-effect:non-scaling-stroke}
+.lp-orbits .lp-line{stroke-width:2.2px}
+.lp-orbits .lp-halo{stroke-width:10px}
+@media (max-width:599px){.lp-orbits .lp-line{stroke-width:1.9px;stroke-opacity:.72}.lp-orbits .lp-halo{stroke-width:8px;stroke-opacity:.17}.lp-star-body{transform:scale(1.9)}}
+/* ===== Новая вёрстка (?v=new, по умолчанию); ?v=old показывает прежнюю ===== */
+.faq-title{display:none}
+:root .faq-title{display:block;margin:0 0 14px}
+:root .brief-faq>.section-kicker{display:none}
+/* sections below the first screen (phone): equal 48 px, the arc before the final card sits inside it */
+@media (max-width:599px){:root .brief{gap:48px}:root .final-ask{margin-top:0}}
+/* desktop: left column centred against the portrait; steps + FAQ | table + final card */
+@media (min-width:900px){
+ :root .hero{grid-template-rows:1fr auto auto 1fr}
+ :root .hero-copy{grid-row:2}
+ :root .scene{grid-row:1/5}
+ :root .hero-action{grid-row:3;margin-top:32px}
+ :root .brief{grid-template-areas:"steps trust" "faq trust" "faq final";grid-template-rows:auto auto 1fr;gap:48px 56px}
+ :root .final-ask::before{display:none}
+}
+/* ===== CTA: one gift ticket with Telegram | ВКонтакте | MAX; the same three buttons in the sticky bar and «Продолжить в:» ===== */
+/* topic chips: quiet one-line pills, so the card is the only big target */
+/* the coupon: glass on ::before, cut by two notches at --ny; the dashed cut-out line is an SVG drawn to size by app.js */
+.cta-card{position:relative;isolation:isolate;margin-top:0;padding:14px 14px 12px;border:1px solid transparent;border-radius:22px;
+ filter:drop-shadow(0 12px 22px #1C092D59) drop-shadow(0 0 12px #FFCEAD30);transition:filter .3s}
+.cta-card.cta-tight{padding:9px 10px}
+@media (max-width:389px){.cta-card:not(.cta-tight){padding-inline:12px}}
+@media (min-width:900px){.cta-card{max-width:470px}}
+.cta-card::before{content:"";position:absolute;inset:-1px;z-index:-1;border-radius:22px;pointer-events:none}
+.cta-card::before{background:linear-gradient(180deg,#FFFFFF14,#FFFFFF08);
+ -webkit-mask:radial-gradient(circle at 0 var(--ny,76px),#0000 12px,#000 12.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% var(--ny,76px),#0000 12px,#000 12.5px) right/51% 100% no-repeat;
+ mask:radial-gradient(circle at 0 var(--ny,76px),#0000 12px,#000 12.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% var(--ny,76px),#0000 12px,#000 12.5px) right/51% 100% no-repeat}
+:root[data-theme=light] .cta-card{filter:drop-shadow(0 10px 18px #4A2F4F24)}
+:root[data-theme=light] .cta-card::before{background:#FFFFFF}
+.cta-title{margin-top:3px;font:400 21px/28px var(--display);letter-spacing:-.2px;white-space:nowrap;color:var(--hero-text)}
+.cta-cut{margin:11px 0 10px;border-top:1px dashed #FFCEAD55}
+:root[data-theme=light] .cta-cut{border-top-color:#62506355}
+.cta-card.cta-tight .cta-cut{margin-block:8px 7px}
+.cta-hint{font-size:14px;line-height:19px;font-weight:600;color:var(--hero-text)}
+@media (max-width:399px){.hero .micro-copy{font-size:12px}}
+@media (max-width:369px){.hero .micro-copy{font-size:11.5px}}
+@media (max-width:359px){.cta-title{font-size:19px;line-height:25px}}
+/* the messenger button, one component everywhere: brand gradient, inner ring, top gloss, brand glow; icon above the name */
+.cta-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.cta-btn{position:relative;overflow:hidden;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0 6px;border-radius:16px;color:#FFF;font-weight:700;line-height:1.2;white-space:nowrap;
+ box-shadow:inset 0 0 0 1.5px #FFFFFF59,0 8px 22px var(--btn-glow);transition:transform .18s,box-shadow .18s,filter .18s}
+.cta-btn[data-platform=telegram]{--btn-glow:#2286C855;background:var(--tg-bg)}
+.cta-btn[data-platform=vk]{--btn-glow:#0077FF55;background:var(--vk-bg)}
+.cta-btn[data-platform=max]{--btn-glow:#6532F555;background:var(--max-bg)}
+.cta-btn::before{content:"";position:absolute;left:0;right:0;top:0;height:45%;border-radius:inherit;border-bottom-left-radius:0;border-bottom-right-radius:0;background:linear-gradient(#FFFFFF33,#FFFFFF00);pointer-events:none}
+.cta-btn svg{flex:none;width:22px;height:22px}
+.cta-btn:active{transform:translateY(1px);filter:brightness(.95)}
+.cta-btn:focus-visible{outline:3px solid #B47239;outline-offset:3px}
+@media (hover:hover){.cta-btn:hover{transform:translateY(-1px)}}
+@media (max-width:359px){.cta-row{gap:6px}.cta-btn{padding:0 4px}}
+/* sizes per place: card 62 px, «Продолжить в:» 60 px, sticky bar 52 px */
+.cta-card .cta-row{margin-top:10px}
+.cta-card.cta-tight .cta-row{margin-top:8px}
+.cta-card .cta-btn{min-height:62px;font-size:15px}
+.continue .cta-btn{min-height:60px;font-size:14px}
+.sticky-inner.cta-row{display:grid}
+.sticky-inner .cta-btn{min-height:52px;gap:4px;border-radius:14px;font-size:13px}
+.sticky-inner .cta-btn svg{width:20px;height:20px}
+@media (max-width:379px){.cta-card .cta-btn{font-size:14px}.continue .cta-btn{font-size:13px}}
+@media (max-width:359px){.cta-card .cta-btn{font-size:13px}.final-ask{padding-inline:12px}}
+/* shine: a soft light band crosses the three card buttons, 4 times, then never again */
+.cta-card .cta-btn::after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,#FFFFFF00,#FFFFFF59,#FFFFFF00);transform:translateX(-160%) skewX(-20deg);pointer-events:none}
+@keyframes cta-shine{0%{transform:translateX(-160%) skewX(-20deg);animation-timing-function:ease-in-out}22.5%,100%{transform:translateX(360%) skewX(-20deg)}}
+@keyframes cta-shine-once{from{transform:translateX(-160%) skewX(-20deg)}to{transform:translateX(360%) skewX(-20deg)}}
+@keyframes cta-point{0%,4%{transform:none;animation-timing-function:ease-in-out}10%{transform:translateY(3px);animation-timing-function:ease-in-out}16%,100%{transform:none}}
+.cta-card:not(.shine-done) .cta-btn::after{animation:cta-shine 4s 2.6s linear 3.225}
+.cta-card:not(.shine-done) .cta-btn:nth-child(2)::after{animation-delay:2.75s}
+.cta-card:not(.shine-done) .cta-btn:nth-child(3)::after{animation-delay:2.9s}
+.cta-point{display:inline-block}
+.cta-card:not(.shine-done) .cta-point{animation:cta-point 4s 2.2s linear 2.16}
+/* ===== the first screen (phones): brand, headline lower, subtitle, the middle (portrait + the steps), the coupon ===== */
+/* card title in two fixed lines; the micro copy inside the card under the buttons */
+.cta-title{margin-top:0;font-size:21px;line-height:1.25}
+.cta-l1,.cta-l2{display:block}
+.cta-free{color:var(--accent)}
+@media (max-width:379px){.cta-title{font-size:20px}}
+@media (max-width:359px){.cta-title{font-size:17px;line-height:1.25}}
+/* the animated 🎁 (Noto Emoji Animation), sized and aligned like the emoji it replaces */
+.cta-gift{display:inline-block;width:1.25em;height:1.25em;margin-right:.3em;vertical-align:-.25em}
+.cta-card .micro-copy{margin-top:10px;text-align:center}
+.cta-card.cta-tight .micro-copy{margin-top:6px}
+@media (min-width:900px){.cta-card .micro-copy{margin-top:10px;text-align:center}}
+.cta-deco{position:absolute;inset:-1px;width:calc(100% + 2px);height:calc(100% + 2px);overflow:visible;z-index:-1;pointer-events:none}
+.cta-deco path{fill:none;stroke:#FFCEADCC;stroke-width:2;stroke-dasharray:7 5}
+:root[data-theme=light] .cta-deco path{stroke:#625063B3}
+.subtitle{font-size:17px;color:#FFF9F0D9}
+:root[data-theme=light] .subtitle{color:var(--hero-sub)}
+@media (max-width:899px){
+ :root{--gap:14px;--htop:42px}
+ .hero-wrap{display:flex;flex-direction:column;min-height:100vh;min-height:100svh}
+ /* the headline's top at about 9% of the screen height (app.js sets --htop) */
+ .hero{flex:1 0 auto;display:flex;flex-direction:column;padding-top:var(--htop);padding-bottom:12px}
+ .subtitle{margin-top:6px;max-width:none;line-height:1.35}
+ .scene{flex:1 1 0;height:auto;min-height:150px;margin:calc(var(--gap) - 4px) 0 0}
+ /* size and place come from app.js (placeSteps): her hair to the shawl, face on the right, the steps beside or below */
+ .portrait{top:var(--pt,0px);right:auto;bottom:auto;left:var(--pl,auto);width:auto;max-width:none;height:var(--ph,100%);aspect-ratio:1122/1402;
+  -webkit-mask-image:linear-gradient(#000 calc(var(--fade,100%) - 72px),#0000 var(--fade,100%));mask-image:linear-gradient(#000 calc(var(--fade,100%) - 72px),#0000 var(--fade,100%))}
+ .hero-action{flex:none}
+}
+/* the steps and other parts of the first screen fade in with this */
+@keyframes mid-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* ===== the chapter pills ===== */
+.chapters{margin-top:18px}
+.chapters ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.chapters li{padding:6px 11px;border-radius:999px;font-size:13px;line-height:17px;font-weight:600;color:var(--hero-text);background:var(--glass);border:1px solid var(--glass-line)}
+/* ===== v19: the headline, final «Крупно»: cream subtitle with a peach bar ===== */
+.hero-copy{isolation:isolate}
+.subtitle{color:#FFF9F0;font-weight:600;font-size:19px;line-height:1.3;padding-left:10px;border-left:3px solid #FFCEAD}
+:root[data-theme=light] .subtitle{color:var(--hero-text);border-left-color:#625063}
+@media (max-width:359px){.subtitle{font-size:17px}}
+/* the dark glow behind the headline is the first layer of the first screen's own background:
+   that box is the whole screen, so no edge of it is near the text; app.js puts the centre (--gy, --gx) in the middle of headline and subtitle */
+.hero-wrap{background:radial-gradient(330px 190px at var(--gxm,34%) var(--gy,calc(var(--htop,42px) + 66px)),#12051C99 0%,#12051C8F 22%,#12051C75 40%,#12051C52 56%,#12051C2E 70%,#12051C14 82%,#12051C05 92%,#12051C00 100%),linear-gradient(transparent 72%,var(--night-top)),var(--hero-gradient)}
+@media (min-width:900px){.hero-wrap{background:radial-gradient(620px 330px at var(--gx,27%) var(--gy,40%),#12051C99 0%,#12051C8F 22%,#12051C75 40%,#12051C52 56%,#12051C2E 70%,#12051C14 82%,#12051C05 92%,#12051C00 100%),linear-gradient(transparent 72%,var(--night-top)),var(--hero-gradient)}}
+:root[data-theme=light] .hero-wrap{background:linear-gradient(transparent 72%,var(--night-top)),var(--hero-gradient)}
+/* ===== v19: the soft top of the middle: the portrait's orbits fade in over the first 48 px under the middle's top
+   (the mask is in the SVG's own box, so it is offset by the portrait's top --pt) ===== */
+@media (max-width:899px){
+ .lp-orbits{-webkit-mask-image:linear-gradient(#0000 calc(0px - var(--pt,0px)),#000 calc(48px - var(--pt,0px)));
+  mask-image:linear-gradient(#0000 calc(0px - var(--pt,0px)),#000 calc(48px - var(--pt,0px)))}
+}
+/* desktop: the steps in the left column between the subtitle and the card; the portrait alone on the right */
+@media (min-width:900px){
+ :root .hero{grid-template-rows:1fr auto auto auto 1fr}
+ :root .scene{grid-row:1/6}
+ :root .hero-action{grid-row:4;margin-top:30px}
+}
+/* ===== v19: «Что будет в разборе», the eight chapters as the bot names them ===== */
+.chapters{margin-top:0}
+/* ===== v22: the three steps («Польза»), her on the left (the photo mirrored on phones, looking right), the steps on the right in one compact group.
+   Phones: the nodes sit on her own orbit o0, which app.js redraws as a ring round her head through the three node centres; under 700 px tall only the short forms show. ===== */
+.hsteps{position:relative;z-index:3;min-width:0}
+.hsteps.is-hidden{display:none}
+.side-steps{list-style:none;margin:0;padding:0;display:grid;row-gap:18px}
+.hsteps.is-short .side-steps{row-gap:12px}
+.side-steps li{position:relative;display:flex;align-items:center;gap:12px;min-width:0;animation:mid-in .35s .5s ease-out backwards}
+.side-steps li:nth-child(2){animation-delay:.62s}
+.side-steps li:nth-child(3){animation-delay:.74s}
+.step-node{position:relative;z-index:1;flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--night-top);border:1px solid #FFCEAD99;color:var(--accent)}
+.hsteps.is-short .step-node{width:40px;height:40px}
+.step-node svg{width:20px;height:20px}
+.hsteps.is-short .step-node svg{width:17px;height:17px}
+.step-num{position:absolute;top:-3px;right:-3px;width:18px;height:18px;border-radius:50%;background:var(--accent);color:var(--bg);font:700 11px/18px var(--body);text-align:center}
+.hs-text{min-width:0;text-shadow:0 1px 12px #12051CCC;text-wrap:balance}
+:root[data-theme=light] .hs-text{text-shadow:none}
+.hs-text b,.hs-text .s-line{display:block}
+.hs-text .s-full,.hs-text .s-short{font-size:15px;line-height:1.25;font-weight:700;color:var(--hero-text)}
+.hs-text .s-line{margin-top:1px;font-size:13px;line-height:1.3;color:var(--hero-text);opacity:.8}
+.hs-text .s-short{display:none}
+.hsteps.is-short .s-full,.hsteps.is-short .s-line{display:none}
+.hsteps.is-short .s-short{display:block}
+/* phones: the steps lie over the middle (app.js sets their top --st and each row's left), the captions may end 12 px before the screen's edge;
+   the whole portrait box flips, photo and both orbit layers (`scale`, so the fade-in animation's transform stays free).
+   Her three orbits o0, o1, o2 become three arcs from one centre (app.js): o0 through the nodes, o1 and o2 inside it, fainter,
+   each with one small pearl moving down along it; her stars, the front lines and halos, her pearls and glows go. */
+@media (max-width:899px){
+ .hsteps{position:absolute;left:0;right:-8px;top:var(--st,0px)}
+ .portrait{scale:-1 1}
+ .lp-star,.lp-front .lp-line,.lp-front .lp-halo,.lp-pearl,.lp-glowdot{display:none}
+ .lp-back .lp-line use[href="#o1"]{opacity:.75}
+ .lp-back .lp-line use[href="#o2"]{opacity:.55}
+ .lp-back .lp-halo use[href="#o1"]{opacity:.5}
+ .lp-back .lp-halo use[href="#o2"]{opacity:.3}
+ .lp-mglow{opacity:.5}
+ /* the outer pearl, the one that passes the steps, a little bigger (app.js sets its radii) and brighter */
+ .lp-mpearl[data-orbit=o0] .lp-mglow{opacity:.7}
+ .lp-mpearl.is-off,.no-arcs .lp-back .lp-line,.no-arcs .lp-back .lp-halo,.no-arcs .lp-mpearl{display:none}
+ /* the card right under the steps (app.js sets the middle's height): the first screen is then shorter than the window and the next block shows */
+ .hero-cut .hero-wrap{min-height:0}
+ .hero-cut .scene{flex:none}
+ /* one rhythm down to the next block (app.js rhythm(): the card to the heading = the gap above the steps, the horizon line halfway) */
+ .hero-cut .hero{padding-bottom:var(--hpb)}
+ .hero-cut .brief{padding-top:var(--bpt)}
+}
+/* desktop: a list in the left column between the subtitle and the card, step 2 a little to the right on a thin «)» through the node centres (app.js);
+   the portrait alone on the right, not mirrored, with all her orbits and pearls */
+@media (min-width:900px){
+ .hsteps{grid-column:1;grid-row:3;margin-top:34px;max-width:470px}
+ .side-steps li:nth-child(2){margin-left:10px}
+ .side-arc{position:absolute;left:0;top:0;width:64px;height:100px;overflow:visible;pointer-events:none;
+  -webkit-mask-image:linear-gradient(#0000,#000 34px,#000 calc(100% - 34px),#0000);mask-image:linear-gradient(#0000,#000 34px,#000 calc(100% - 34px),#0000)}
+ .side-arc path{fill:none;stroke:var(--accent);stroke-opacity:.45;stroke-width:1;vector-effect:non-scaling-stroke}
+}
+@media (max-width:899px){.side-arc{display:none}}
+@media (min-width:900px){.lp-mpearl{display:none}}
+/* ===== v27: the headline on phones, «По центру» (final since v27): brand, headline and subtitle centred; a short accent line
+   between headline and subtitle instead of the left bar; the dark glow centred. app.js (balanceHeadline) balances the block;
+   desktop as before. ===== */
+@media (max-width:899px){
+ .header{justify-content:center}
+ .hero-copy{text-align:center}
+ .hero-wrap{--gxm:50%}
+ .subtitle{position:relative;border-left:0;padding-left:0;padding-top:14px}
+ .subtitle::before{content:"";position:absolute;left:50%;top:4px;width:28px;height:2px;margin-left:-14px;border-radius:1px;background:var(--accent)}
+}
+
+/* site-ig: только Telegram */
+.cta-row{grid-template-columns:minmax(0,1fr)}
+.cta-btn{font-size:17px;gap:10px}
+.cta-btn svg{width:24px;height:24px}
