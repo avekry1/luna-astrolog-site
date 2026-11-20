@@ -71,8 +71,12 @@ window.__lunaPathLabel = function () {
   var code = /^[A-Za-z0-9_-]{1,64}$/.test(raw) ? raw : 'lp_site';
   var url = 'https://t.me/AstroLunaai_bot?start=' + encodeURIComponent(code);
   window.__bot = url;
-  if (window.__lunaClick) window.__lunaClick('tap');  // сразу в бота = нажал Telegram
-  location.replace(url);
+  if (window.__lunaClick) {  // клик из рекламы: «нажал Telegram» и 0,15 с, чтобы встроенный браузер успел отдать клик
+    window.__lunaClick('tap');
+    setTimeout(function () { location.replace(url); }, 150);
+  } else {
+    location.replace(url);
+  }
 })();
 </script>
 <style>
